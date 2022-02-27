@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 
 
 export default class News extends Component {
+    
     static propTypes = {
         country: PropTypes.string,
         pagesize: PropTypes.number,
@@ -25,7 +26,7 @@ export default class News extends Component {
         document.title = `NewsFeed - ${this.props.category}`
     }
     async componentDidMount(){
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ccd7e1f01d6e43f68adc8268c47ead80&page=1&pageSize=${this.props.pagesize}`
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=44c6b5a3a2ad485b9308dac6e3597cae&page=1&pageSize=${this.props.pagesize}`
         let data = await fetch(url);
         let parseddata = await data.json();
         this.setState({articles:parseddata.articles, totalresults:parseddata.totalResults})
@@ -36,7 +37,7 @@ export default class News extends Component {
 
         }
         else{
-            let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ccd7e1f01d6e43f68adc8268c47ead80&page=${this.state.page+1}&pageSize=${this.props.pagesize}`
+            let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=44c6b5a3a2ad485b9308dac6e3597cae&page=${this.state.page+1}&pageSize=${this.props.pagesize}`
             let data = await fetch(url);
             let parseddata = await data.json();
             window.scrollTo(0,0);
@@ -49,7 +50,7 @@ export default class News extends Component {
     }
 
     handleprevclick = async() =>{
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=ccd7e1f01d6e43f68adc8268c47ead80&page=${this.state.page-1}&pageSize=${this.props.pagesize}`
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=44c6b5a3a2ad485b9308dac6e3597cae&page=${this.state.page-1}&pageSize=${this.props.pagesize}`
         let data = await fetch(url);
         let parseddata = await data.json();
         window.scrollTo(0,0);
