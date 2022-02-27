@@ -17,13 +17,13 @@ export class Navbar extends Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav">
-                        <a className="nav-link" aria-current="page" href="/">Home</a>
-                        <a className="nav-link" href="/business">Business</a>
-                        <a className="nav-link" href="/entertainment">Entertainment</a>
-                        <a className="nav-link" href="/health">Health</a>
-                        <a className="nav-link" href="/science">Science</a>
-                        <a className="nav-link" href="/sports">Sports</a>
-                        <a className="nav-link" href="/technology">Technology</a>
+                        <a className="nav-link" key="general" aria-current="page" href="/">Home</a>
+                        <a className="nav-link" key="business"  href="/business">Business</a>
+                        <a className="nav-link" key="entertainment" href="/entertainment">Entertainment</a>
+                        <a className="nav-link" key="health" href="/health">Health</a>
+                        <a className="nav-link" key="science" href="/science">Science</a>
+                        <a className="nav-link" key="sports" href="/sports">Sports</a>
+                        <a className="nav-link" key="technology" href="/technology">Technology</a>
                     </div>
                     </div>
                 </div>
