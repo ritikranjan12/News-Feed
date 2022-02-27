@@ -61,7 +61,7 @@ export default class News extends Component {
   render() {
     return (
       <div className="container my-3">
-        <h2 className='text-center'>NewsFeed - Top {this.props.category} HeadLines</h2>
+        <h2 className='text-center'>NewsFeed - Top HeadLines</h2>
         <div className="row">
             {this.state.articles.map((element)=> {
                     return <div className="col-md-4" key={element.url}>
