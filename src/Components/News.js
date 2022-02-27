@@ -63,12 +63,11 @@ export default class News extends Component {
       <div className="container my-3">
         <h2 className='text-center'>NewsFeed - Top {this.props.category} HeadLines</h2>
         <div className="row">
-            {this.state.articles?this.state.articles.map((element)=> {
+            {this.state.articles.map((element)=> {
                     return <div className="col-md-4" key={element.url}>
                         <Newsitem  title={element.title?element.title.slice(0,45):""} description={element.description?element.description.slice(0,88):""} imgurl={element.urlToImage} newsurl={element.url} author={element.author?element.author:"Anonymous"} date={element.publishedAt} source={element.source.name} />
                     </div> 
-                })
-            : null}
+                })}
         </div>
         <div className="container  d-flex justify-content-between">
             <button disabled={this.state.page<=1} type='button'onClick={this.handleprevclick} className='btn btn-secondary '>❮Previous</button>
